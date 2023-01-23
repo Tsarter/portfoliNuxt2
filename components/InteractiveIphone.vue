@@ -60,7 +60,7 @@
                                     <div class="signal mid"><i class="bar"></i></div>
                                     <div class="datos">4G</div>
                                     <div class="bateria mid"></div>
-                                    <div class="exitShake">Listo</div>
+                                    <div class="exitShake">Done</div>
                                 </div>
                             </div>
                             <div class="lockScreen">
@@ -211,39 +211,39 @@
                                                 style="background-image: url(https://firebasestorage.googleapis.com/v0/b/fotos-3cba1.appspot.com/o/ios14%2Ffotos.png?alt=media&token=86d712fd-aab1-48a3-a6d0-f2b5b7f9a2ab);">
                                             </div>
                                             <div class="textos">
-                                                <p class="actionName">Fotos</p>
+                                                <p class="actionName">Photos</p>
                                                 <p class="actionApp">3min</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="editButton">Editar</div>
+                                    <div class="editButton">Edit</div>
                                 </div>
                             </div>
                             <div class="widgetScreen hidden">
                                 <div class="wrapper">
                                     <div class="buscador">
-                                        <div class="icono"></div>Buscar widgets
+                                        <div class="icono"></div>Search widgets
                                     </div>
                                     <div class="widgetWrapper">
                                         <div class="widget full">
                                             <div class="preview"></div>
-                                            <p class="nombre">Pila inteligente</p>
+                                            <p class="nombre">Smart stack</p>
                                         </div>
                                         <div class="widget">
                                             <div class="preview"></div>
-                                            <p class="nombre">Notas</p>
+                                            <p class="nombre">Notes</p>
                                         </div>
                                         <div class="widget">
                                             <div class="preview"></div>
-                                            <p class="nombre">Mapas</p>
+                                            <p class="nombre">Maps</p>
                                         </div>
                                         <div class="widget">
                                             <div class="preview"></div>
-                                            <p class="nombre">Música</p>
+                                            <p class="nombre">Music</p>
                                         </div>
                                         <div class="widget">
                                             <div class="preview"></div>
-                                            <p class="nombre">Podcast</p>
+                                            <p class="nombre">Podcasts</p>
                                         </div>
                                     </div>
                                 </div>
@@ -261,7 +261,7 @@
                                                 </svg>
                                             </div>
                                             <div class="txt">
-                                                <p class="name">Modo de vuelo</p>
+                                                <p class="name">Flight mode</p>
                                                 <p class="val">No</p>
                                             </div>
                                         </div>
@@ -292,7 +292,7 @@
                                                 </svg>
                                             </div>
                                             <div class="txt">
-                                                <p class="name">Datos celulares</p>
+                                                <p class="name">Cellular data</p>
                                                 <p class="val">No</p>
                                             </div>
                                         </div>
@@ -332,20 +332,20 @@
                                             <div class="ico"></div>
                                             <div class="txt">
                                                 <p class="name">AirDrop</p>
-                                                <p class="val">No recibir</p>
+                                                <p class="val">Receiving Off</p>
                                             </div>
                                         </div>
                                         <div class="actionIcon icon compartirInternet" style="display: none;">
                                             <div class="ico"></div>
                                             <div class="txt">
-                                                <p class="name">Compartir internet</p>
+                                                <p class="name">Personal Hotspot</p>
                                                 <p class="val">No</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="musicWdg iconWrapper-wX2 padding">
-                                        <p class="songName">Summertime</p>
-                                        <p class="artistName">Orville Peck</p>
+                                        <p class="songName">Bulletbroof</p>
+                                        <p class="artistName">La Roux</p>
                                         <div class="icons">
                                             <div class="icon rew">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
@@ -387,7 +387,7 @@
                                                 <path d="M20 26V8h42v32H44"></path>
                                                 <path d="M2 26h42v32H2z"></path>
                                             </svg>
-                                            <p>Duplicar pantalla</p>
+                                            <p>Duplicate Screen</p>
                                         </div>
                                     </div>
                                     <div class="fullBars iconWrapper-wX2">
@@ -417,9 +417,10 @@
                                                 </path>
                                             </svg>
                                         </div>
-                                        <p>Aquí se mostrarán los accesorios y ambientaciones que agregues a la app Casa.
+                                        <p>The accessories and settings that you add to the Home app will be displayed
+                                            here.
                                         </p>
-                                        <p class="link">Abrir app Casa</p>
+                                        <p class="link">Open Home app</p>
                                     </div>
                                     <div class="actionIcon iconItem lampara">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
@@ -678,7 +679,7 @@ export default {
                     dinamico: false
                 },
                 {
-                    nombre: 'Files1',
+                    nombre: 'Files',
                     icono: 'https://firebasestorage.googleapis.com/v0/b/fotos-3cba1.appspot.com/o/ios14%2Farchivos.png?alt=media&token=b4ce6b1b-9877-41ca-a0f3-b05526591495',
                     type: 'app',
                     dinamico: false
@@ -690,14 +691,14 @@ export default {
                     dinamico: false
                 },
                 {
-                    nombre: 'Find my1',
+                    nombre: 'Find my',
                     icono: 'https://firebasestorage.googleapis.com/v0/b/fotos-3cba1.appspot.com/o/ios14%2Ffindphone.png?alt=media&token=9b0106d2-b151-49af-a3d9-dfbd64bc4421',
                     type: 'app',
                     dinamico: false
                 }
             ],
             wrapperApps: {
-                appsGrupo: 17,
+                appsGrupo: 18,
                 grupoActivo: 1,
                 medida: $('.wrapperApps').outerWidth(true),
                 transform: 0
@@ -1254,7 +1255,7 @@ ${app.notificaciones ? `<div class="notificacion">${app.notificaciones}</div>` :
                         }
                         $('body').append(`
 <div class="fixedMenuFixedApp" style="${cssMenu}">
-<div class="menuOption eliminar">Eliminar app
+<div class="menuOption eliminar">Remove App
 <div class="icono">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 <circle cx="32" cy="32" r="30"></circle>
@@ -1262,7 +1263,7 @@ ${app.notificaciones ? `<div class="notificacion">${app.notificaciones}</div>` :
 </svg>
 </div>
 </div>
-<div class="menuOption shaking">Editar pantalla de inicio
+<div class="menuOption shaking">Edit Home Screen
 <div class="icono">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 <path d="M14 59a3 3 0 0 0 3 3h30a3 3 0 0 0 3-3v-9H14zM50 5a3 3 0 0 0-3-3H17a3 3 0 0 0-3 3v5h36zm0 45V10m-36 0v40"></path>
@@ -1314,11 +1315,11 @@ ${app.notificaciones ? `<div class="notificacion">${app.notificaciones}</div>` :
             $('#fixedApp').remove();
             $('.mainScreen').removeClass('filterBlur');
             alertaiOS({
-                encabezado: `¿Transferir ${idApp !== undefined ? globalState.apps[idApp].nombre : 'app'} a la biblioteca de apps o eliminar la app?`,
-                mensaje: 'Transferir la app la quitará de tu pantalla de inicio conservando todos los datos',
+                encabezado: `Transfer ${idApp !== undefined ? globalState.apps[idApp].nombre : 'app'} to the app library or delete the app?`,
+                mensaje: 'Transferring the app will remove it from your home screen keeping all the data',
                 acciones: [
                     {
-                        texto: 'Eliminar app',
+                        texto: 'Delete App',
                         warning: true,
                         callback: function () {
                             if (idApp !== undefined) {
@@ -1330,7 +1331,7 @@ ${app.notificaciones ? `<div class="notificacion">${app.notificaciones}</div>` :
                         }
                     },
                     {
-                        texto: 'Transferir a la biblioteca de apps',
+                        texto: 'Transfer to app library',
                         callback: function () { console.log('Biblioteca de apps pendiente') }
                     },
                     {
@@ -1347,11 +1348,11 @@ ${app.notificaciones ? `<div class="notificacion">${app.notificaciones}</div>` :
             $('.appScreen .app .removeApp').remove();
             $('.mainScreen').removeClass('shakingApps');
             alertaiOS({
-                encabezado: `¿Transferir ${idApp !== undefined ? globalState.apps[idApp].nombre : 'app'} a la biblioteca de apps o eliminar la app?`,
-                mensaje: 'Transferir la app la quitará de tu pantalla de inicio conservando todos los datos',
+                encabezado: `Transfer ${idApp !== undefined ? globalState.apps[idApp].nombre : 'app'} to the app library or delete the app?`,
+                mensaje: 'Transferring the app will remove it from your home screen keeping all the data',
                 acciones: [
                     {
-                        texto: 'Eliminar app',
+                        texto: 'Delete App',
                         warning: true,
                         callback: function () {
                             if (idApp !== undefined) {
@@ -1363,7 +1364,7 @@ ${app.notificaciones ? `<div class="notificacion">${app.notificaciones}</div>` :
                         }
                     },
                     {
-                        texto: 'Transferir a la biblioteca de apps',
+                        texto: 'Transfer to app library',
                         callback: function () { console.log('Biblioteca de apps pendiente') }
                     },
                     {
@@ -3510,7 +3511,7 @@ body {
                                             box-sizing: border-box;
 
                                             &:before {
-                                                content: "Aquí iría un widget pero no lo termine xD";
+                                                content: "Woah, you have discovered a lot.";
                                                 display: block;
                                                 width: 100%;
                                                 font-size: 10px;
