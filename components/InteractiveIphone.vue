@@ -729,19 +729,71 @@ export default {
                 let initCoords = { x: 0, y: 0 };
                 let movCoords = { x: 0, y: 0 };
                 let downCoords = { x: 0, y: 0 };
+
                 el.mousedown(function (e) {
-                    initCoords = { x: e.pageX, y: e.pageY };
+                    if (el.ontouchstart !== null) {
+                        console.log("Desktop touch")
+                        initCoords = { x: e.pageX, y: e.pageY };
+                        downCoords = { x: movCoords.x, y: movCoords.y };
+                        el.mousemove(function (e2) {
+                            globalState.draggScreen = true;
+                            movCoords = { x: e2.pageX, y: e2.pageY };
+                            if (config.mov === 'x') {
+                                config.updateMovX(e2, (movCoords.x - initCoords.x))
+                            } else if (config.mov === 'y') {
+                                config.updateMovY(e2, (movCoords.y - initCoords.y))
+                            }
+                        })
+                        el.mouseup(function (ex) {
+
+                            if (config.mov === 'x') {
+                                if (movCoords.x - downCoords.x != 0) {
+                                    (movCoords.x - initCoords.x) > 0 ? config.movDer(ex) : config.movIzq(ex);
+                                }
+                            } else if (config.mov === 'y') {
+                                if (movCoords.y - downCoords.y != 0) {
+                                    (movCoords.y - initCoords.y) > 0 ? config.movDown(ex) : config.movUp(ex);
+                                }
+                            }
+                            globalState.draggScreen = false;
+                            config.finishMov(ex);
+                            el.off('mousemove');
+                            el.off('mouseup');
+                            el.off('mouseleave');
+                        })
+                        el.mouseleave(function (a) {
+                            if (config.mov === 'x') {
+                                if (movCoords.x - downCoords.x != 0) {
+                                    (movCoords.x - initCoords.x) > 0 ? config.movDer(a) : config.movIzq(a);
+                                }
+                            } else if (config.mov === 'y') {
+                                if (movCoords.y - downCoords.y != 0) {
+                                    (movCoords.y - initCoords.y) > 0 ? config.movDown(a) : config.movUp(a);
+                                }
+                            }
+                            globalState.draggScreen = false;
+                            config.finishMov(a);
+                            el.off('mousemove');
+                            el.off('mouseup');
+                            el.off('mouseleave');
+                        })
+                    }
+                })
+
+                $(el).on("touchstart", function (e) {
+                    e.preventDefault();
+                    initCoords = { x: e.changedTouches[0].pageX, y: e.changedTouches[0].pageY };
                     downCoords = { x: movCoords.x, y: movCoords.y };
-                    el.mousemove(function (e2) {
+                    $(el).on("touchmove", function (e2) {
                         globalState.draggScreen = true;
-                        movCoords = { x: e2.pageX, y: e2.pageY };
+                        movCoords = { x: e2.changedTouches[0].pageX, y: e2.changedTouches[0].pageY };
                         if (config.mov === 'x') {
                             config.updateMovX(e2, (movCoords.x - initCoords.x))
                         } else if (config.mov === 'y') {
                             config.updateMovY(e2, (movCoords.y - initCoords.y))
                         }
                     })
-                    el.mouseup(function (ex) {
+                    $(el).on("touchend", function (ex) {
 
                         if (config.mov === 'x') {
                             if (movCoords.x - downCoords.x != 0) {
@@ -758,7 +810,7 @@ export default {
                         el.off('mouseup');
                         el.off('mouseleave');
                     })
-                    el.mouseleave(function (a) {
+                    $(el).on("touchend", function (a) {
                         if (config.mov === 'x') {
                             if (movCoords.x - downCoords.x != 0) {
                                 (movCoords.x - initCoords.x) > 0 ? config.movDer(a) : config.movIzq(a);
@@ -870,7 +922,7 @@ export default {
                 let hoy = config.fecha.getDate();
                 let dia = globalState.dateTime.dias[config.fecha.getDay()];
                 let mes = globalState.dateTime.meses[config.fecha.getMonth()];
-                this.text(`${config.diaCompleto ? dia : dia.substring(0, 3)}, ${hoy} de ${mes}`);
+                this.text(`${config.diaCompleto ? dia : dia.substring(0, 3)}, ${hoy}. ${mes}`);
                 return this;
             },
         })
@@ -1085,6 +1137,7 @@ ${app.notificaciones ? `<div class="notificacion">${app.notificaciones}</div>` :
         $('.lockScreen').touchMov({
             mov: 'y',
             movUp: function (e) {
+                console.log("MOve Up happened");
                 $(e.currentTarget).siblings('.statusBar').addClass('mov');
                 $(e.currentTarget).addClass('hidden');
                 $(e.currentTarget).siblings('.appScreen.hidden').removeClass('hidden');
@@ -1114,6 +1167,7 @@ ${app.notificaciones ? `<div class="notificacion">${app.notificaciones}</div>` :
             }
         });
         $('.wrapperApps').touchMov({
+
             updateMovX: function (e, mov) {
                 $(e.currentTarget).css({
                     transform: `translateX(${globalState.wrapperApps.transform + mov}px)`,
@@ -1124,7 +1178,7 @@ ${app.notificaciones ? `<div class="notificacion">${app.notificaciones}</div>` :
                 console.log("Slide left or right", globalState.wrapperApps.grupoActivo)
                 if (globalState.wrapperApps.grupoActivo != globalState.wrapperApps.grupos) {
                     globalState.wrapperApps.grupoActivo++;
-                    console.log("Slideded", globalState.wrapperApps)
+
                 }
                 $(e.currentTarget).css({
                     transform: `translateX(-${globalState.wrapperApps.medida * (globalState.wrapperApps.grupoActivo - 1)}px)`,
