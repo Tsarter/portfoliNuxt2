@@ -8,7 +8,11 @@ module.exports = {
     './nuxt.config.{js,ts}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'dark-transparent': '#000000d4',
+      },
+    },
   },
   plugins: [require('daisyui')],
   daisyui: {
