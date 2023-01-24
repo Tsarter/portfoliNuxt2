@@ -6,7 +6,7 @@
 
     <div class="carousel-container">
         <carousel-3d :controls-visible="true" :controls-prev-html="'&#10092; '" :controls-next-html="'&#10093;'"
-            :autoplay="false" :autoplay-timeout="4000" :count="3" :space="400" :height="600">
+            :autoplay="false" :autoplay-timeout="4000" :count="3" :space="300" :height="600">
             <slide :index="0" :key="0">
                 <CarouselCard imageUrl="/simplytoboWebsite.webp" />
             </slide>
@@ -16,6 +16,7 @@
             <slide :index="2" :key="2">
                 <CarouselCard imageUrl="/toboTaxi.jpg" />
             </slide>
+
 
 
         </carousel-3d>
@@ -39,14 +40,23 @@ export default {
 
 
 <style scoped>
-.carousel-home-resources.left-1 {
+/* .left-1 {
 
     transform: translateX(-500px) translateZ(-400px) rotateY(-30deg) !important;
 }
 
-.carousel-home-resources.right-1 {
+.right-1 {
     transform: translateX(500px) translateZ(-400px) rotateY(30deg) !important;
+} */
+
+/* .left-1 {
+
+    opacity: 0.5 !important;
 }
+
+.right-1 {
+    opacity: 0.5 !important;
+} */
 
 .carousel-container {
     /* height: 600px; */
