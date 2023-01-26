@@ -11,6 +11,9 @@ module.exports = {
     extend: {
       colors: {
         'dark-transparent': '#000000d4',
+        dark: '#191919',
+        light_purple: '#837FFF',
+        extra_light_purple: '#9996FF',
       },
     },
   },

@@ -1,14 +1,18 @@
 
 
 <template  >
-    <div class="relative h-full w-full">
-        <img class="object-cover object-top h-full" :src="imageUrl" />
-        <div class="absolute bottom-0 h-2/5 w-full bg-dark-transparent rounded-t-lg p-3">
-            <h3 class="text-3xl">Tobo</h3>
-            <p>Comparing made simple</p>
-            <span class="text-sm rounded-lg  bg-gradient-to-r from-indigo-500 to-indigo-800 p-1.5">Figma</span><span
-                class="text-xs rounded-lg bg-gradient-to-r from-cyan-500 to-cyan-600 p-1.5">HTML5UP</span><span
-                class="text-xs rounded-lg bg-gradient-to-r from-green-900 to-green-800 p-1.5">Mockups</span>
+    <div class="relative h-full w-full bg-extra_light_purple">
+
+        <img class="object-cover object-top h-3/4" :src="imageUrl" />
+
+        <div class="absolute bottom-0 h-2/5  border-light_purple -left-px">
+            <img class="object-cover " src="/Vector_7.svg" />
+            <div class="flex flex-col h-full p-3 bg-light_purple gap-2">
+                <h3 class=" text-3xl font-medium">{{ title }}</h3>
+                <p class="text-slate-100">{{ description }}</p>
+                <NuxtLink class="text-white underline" to="/">View Project</NuxtLink>
+            </div>
+
         </div>
     </div>
 
@@ -18,6 +22,14 @@
 export default {
     props: {
         imageUrl: {
+            type: String,
+            required: true
+        },
+        title: {
+            type: String,
+            required: true
+        },
+        description: {
             type: String,
             required: true
         }

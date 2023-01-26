@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 body {
-    background-color: #191919;
+    background-color: var(--main-color);
     font-family: "Open Sans", sans-serif;
     margin: 0;
     overflow-x: hidden;

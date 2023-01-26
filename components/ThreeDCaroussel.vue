@@ -1,4 +1,4 @@
-<!-- Based on  Vue 3D library https://wlada.github.io/vue-carousel-3d/examples/-->
+<!-- Based on  Vue 3D library https://wlada.github.io/vue-carousel-3d/examples/ -->
 
 
 
@@ -6,15 +6,16 @@
 
     <div class="carousel-container">
         <carousel-3d :controls-visible="true" :controls-prev-html="'&#10092; '" :controls-next-html="'&#10093;'"
-            :autoplay="false" :autoplay-timeout="4000" :count="3" :space="300" :height="600">
+            :autoplay="false" :autoplay-timeout="4000" :count="3" :space="300" :height="500">
             <slide :index="0" :key="0">
-                <CarouselCard imageUrl="/simplytoboWebsite.webp" />
+                <CarouselCard imageUrl="/eviikingidViking.png" title="E-Viikingid"
+                    description="Get your food, library, timetable, ekool all from one place. " />
             </slide>
             <slide :index="1" :key="1">
-                <CarouselCard imageUrl="/cibus.jpg" />
+                <CarouselCard imageUrl="/cibus.jpg" title="Cibus" description="Food ingridients finder" />
             </slide>
             <slide :index="2" :key="2">
-                <CarouselCard imageUrl="/toboTaxi.jpg" />
+                <CarouselCard imageUrl="/toboTaxi.jpg" title="Tobo" description="Taxi comparer" />
             </slide>
 
 
@@ -70,6 +71,7 @@ export default {
     /* height: 800px !important; */
     background-color: rgba(0, 0, 0, 0.767) !important;
     border-radius: 1rem !important;
+    border-width: 0 !important;
     color: white;
 }
 

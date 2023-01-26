@@ -36,9 +36,23 @@ var hideLaunch = ref(false)
     </div>
 
     <div class="h-screen">
+      <div class="flex justify-center w-full mb-24">
+        <h1 class="text-white font-bold text-6xl">Websites</h1>
+      </div>
       <LazyThreeDCaroussel ref="Caroussel" v-if="isVisible" />
     </div>
-
+    <div class="h-screen">
+      <div class="flex justify-center w-full mb-24">
+        <h1 class="text-white font-bold text-6xl">Apps</h1>
+      </div>
+      <LazyThreeDCaroussel ref="Caroussel" v-if="isVisible" />
+    </div>
+    <div class="h-screen">
+      <div class="flex justify-center w-full mb-24">
+        <h1 class="text-white font-bold text-6xl">Hobbies</h1>
+      </div>
+      <LazyThreeDCaroussel ref="Caroussel" v-if="isVisible" />
+    </div>
 
 
   </div>

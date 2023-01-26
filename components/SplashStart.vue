@@ -2,7 +2,7 @@
 <template>
     <div>
         <div v-if="S1Visible" id="splashAnimation">
-            <div class="splash">
+            <div class="splash bg-dark">
                 <div class="splash_logo">TT</div>
                 <div class="splash_svg">
                     <svg width="100%" height="100%">
