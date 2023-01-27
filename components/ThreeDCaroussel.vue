@@ -6,20 +6,32 @@
 
     <div class="carousel-container">
         <carousel-3d :controls-visible="true" :controls-prev-html="'&#10092; '" :controls-next-html="'&#10093;'"
-            :autoplay="false" :autoplay-timeout="4000" :count="3" :space="300" :height="500">
+            :autoplay="false" :autoplay-timeout="4000" :count="6" :space="300" :height="500">
             <slide :index="0" :key="0">
                 <CarouselCard imageUrl="/eviikingidViking.png" title="E-Viikingid"
-                    description="Get your food, library, timetable, ekool all from one place. " />
+                    description="A visually beatiful webpage made in wordpress." />
             </slide>
             <slide :index="1" :key="1">
-                <CarouselCard imageUrl="/cibus.jpg" title="Cibus" description="Food ingridients finder" />
+                <CarouselCard imageUrl="/viking-logo-Transparent.png" title="Viiking"
+                    description="A single page webapp made purely in css, html, javascript." />
             </slide>
             <slide :index="2" :key="2">
-                <CarouselCard imageUrl="/toboTaxi.jpg" title="Tobo" description="Taxi comparer" />
+                <CarouselCard imageUrl="/toboTaxi.jpg" title="Tobo"
+                    description="An modified version of HTML5UP template." />
+            </slide>
+            <slide :index="3" :key="3">
+                <CarouselCard imageUrl="/shrekRacing.png" title="World Rally Shrek"
+                    description='A modified version of the website "Cyberpunk 2077".' />
+            </slide>
+            <slide :index="4" :key="4">
+                <CarouselCard imageUrl="/rockRockStore.jpg" title="Väekivid"
+                    description="An online shop made with React.js, with working state managment and payments." />
             </slide>
 
-
-
+            <slide :index="5" :key="5">
+                <CarouselCard imageUrl="/cibus.jpg" title="Cibus"
+                    description="A single page webapp with Google login and Supabase as database." />
+            </slide>
         </carousel-3d>
     </div>
 
